@@ -1,0 +1,280 @@
+
+/*------------------------------BACKGROUNDS----------------------------------*/
+body{
+    background-image:url(../assets/img/Asturias1.jpg);   
+}  
+
+
+/*----------------------------------MENÚ------------------------------------*/
+.navigation{
+    color: #0f3854;
+}
+
+/*------------------------CSS RELOJ Y FECHA DIGITAL---------------------------*/
+
+/*contenedor grande fecha y hora*/
+.contenedor-dia-hora{
+    font-family: "Orbitron", sans-serif;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    color: white;
+    margin-top:-25px;
+}
+
+/*contenedor hora*/
+.reloj{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    letter-spacing: 12px;
+    -webkit-text-stroke: 1.2px #0f3854;
+    
+}
+
+/*contenedor fecha*/
+.dia-mes-año{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    letter-spacing: 8px;
+    -webkit-text-stroke: 1px #0f3854;
+}
+
+/*contenedor-frases*/
+.contenedor-frases{
+    font-family: "Orbitron", sans-serif;
+    display: block;
+    align-items: center;
+    width:100%;
+    height: 50px;
+    color: white;
+    padding-top: 30px;
+    margin-top: -20px;
+}
+
+/*formato frases*/
+#frases{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Space Mono", serif;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 4px;
+    padding-top: 20px;
+    background-color: #0f3854;
+    padding: 10px;
+}
+
+/*------------------------CSS CREADOR CONTRASEÑA SEGURA----------------------------*/
+
+/*contenedor grande todo lo relacionado con contraseña*/
+.contenedor-contraseña{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 435px;
+    height: 230px;
+    border:  #0f3854 solid;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-left: 110px;
+    background-color: rgba(51, 51, 51, 0.476);
+}
+
+/*contenedor titulo*/
+.contenedor-titulo{
+    font-size: 17px;
+    font-family: "Audiowide", sans-serif;
+    color:  #102f44;
+    -webkit-text-stroke: 0.5px #dee9f1;
+    margin-bottom: -15px;
+}
+
+/*contenedor sub-titulo*/
+.contenedor-subtitulo{
+    font-size: 12px;
+    font-family:"Space Mono", serif;
+    color:  #dee9f1;
+}
+
+/*contenedor input y boton*/
+.contenedor-selector{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap:15px;
+    padding-top: 5px;
+    margin-top:-25px;
+}
+
+/*boton generar contraseña*/
+#generar-contraseña{
+    border-radius: 15px  #0f3854;
+    background-color: #245779;
+    font-family:"Space Mono", serif;
+    font-size: 12px;
+    color: #a9c7dc;
+    cursor: pointer;
+}
+
+#longitud-Contraseña{
+    border-radius: 15px  #0f3854;
+    background-color:#d1dfe9;
+    font-family:"Space Mono", serif;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/*contendor donde muestra la contraseña*/
+.contenedor-mostrar-contraseña{
+    background-color:#d1dfe9;
+    width: 390px;
+    height: 30px;
+    border-radius: 15px;
+    margin-top:15px;
+}
+/*campos donde se muestra la contraseña*/
+#mostrar-contraseña{
+    color:  #0f3854;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    font-family:"Space Mono", serif;
+}
+
+/*---------------------------LINKS INTERÉS----------------------------------*/
+
+/*contenedor grande de los links*/
+.contenedor-links{
+    display: block;
+    justify-content: center;
+    width: 435px;
+    height: 230px;
+    border:  #0f3854 solid;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-left: 110px;
+    height: 500px;
+    background-color: rgba(51, 51, 51, 0.576);
+}
+
+/*boton añadir enlace*/
+.botonAñadir{
+    font-family:"Space Mono", serif;
+    background-color: #245779;
+    cursor: pointer;
+    font-size: 15px;  
+    width: 350px;
+    color:#d1dfe9;
+}
+
+/*contenedor añadir enlace*/
+.contenedor-botonAñadir{
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    height: 35px;
+}
+
+/*contenedor titulo*/
+.titulo{
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    font-family: "Audiowide", sans-serif;
+    color:  #0f3854;
+    margin-bottom: -15px;
+    padding: 15px;
+}
+
+/*contenedor de los dos input*/
+.contenedor-tituloLink, .contenedor-urlLink{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+/*input donde meteo nombre del link y la url*/
+.tituloLink,.urlLink{
+    font-size: 12px;
+    height: 30px;
+    width: 350px;
+    font-family:"Space Mono", serif;
+    background-color:#d1dfe9;
+}
+
+/*contenedor links*/
+.contenedor-listado-links{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    width: 400px;
+    height: 200px;
+    margin-left: 15px;    
+}
+
+ 
+/*cada links que voy guardando*/
+.listaLinks{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    font-family:"Space Mono", serif;
+    color:  #d1dfe9;
+    margin-top: 25px;
+    width: 90px;
+    height: 35px;
+    text-decoration: underline;
+
+    margin-top: 50px;
+    margin-bottom: -45px;
+    background-color: rgba(51, 51, 51, 0.776);
+    border-radius: 15px;
+    cursor: pointer;
+   
+}
+
+/*botón eliminar*/
+.btnEliminarLink{
+    width: 10px;
+    height: 15px;
+    font-size: 10px;
+    font-family:"Space Mono", serif;
+    background-color: #d1dfe9;
+    color:#2a2b2c;
+    cursor: pointer;
+    margin-left: 15px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    
+}
+
+/*---------------------------ESTACIÓN METEOROLÓGICA----------------------------------*/
+
+/*contenedor grande de los links*/
+#app{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center; 
+    border:  #0f3854 solid;
+    border-radius: 20px;
+    margin-top: -700px;
+    margin-left:650px;
+    height: 400px;
+    width: 700px;
+    background-color: rgba(51, 51, 51, 0.576);
+}

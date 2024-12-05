@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./css/styles.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Space+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Share+Tech+Mono&family=Space+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <title>Dashboard</title>
+</head>
+<!-------------------CAMBIAR BACKGROUND CADA 10 seg---------------------->
+<body>
+ 
+<!----------------------------------MENÚ----------------------------------->
+  <header>
+    </nav> 
+      <div class="containerMenu">
+        <a href="http://127.0.0.1:5500/project-break-dashboard/reloj.index.html" class="navigation"><span class="material-icons">schedule</span></a>
+        <a href="http://127.0.0.1:5500/project-break-dashboard/contrase%C3%B1as.index.html" class="navigation"><span class="material-icons">lock</span></a>
+        <a href="http://127.0.0.1:5500/project-break-dashboard/link.index.html" class="navigation"><span class="material-icons">link</span></a> 
+        <a href="http://127.0.0.1:5500/project-break-dashboard/estacion.meteo.index.html" class="navigation"><span class="material-icons">cloud</span></a>
+        <!--<audio class="music"src="C:\Users\PC\Documents\The Bridge\Sprint 7_8\Proyecto\project-break-dashboard\audio\musicaAsturias.mp3"  type="audio/mp3" preload = "auto" autoplay loop></audio>-->
+      </div>
+    </nav>
+   <!----------------------HTML RELOJ DIGITAL------------------------------>
+      <div class="contenedor-dia-hora">
+        <div class="reloj" id="reloj"></div>
+        <div class="dia-mes-año" id="dia-mes-año"></div>
+      </div> 
+      <div class="contenedor-frases">
+        <div class="frases" id="frases"></div>
+      </div>
+   
+   <!--------------------HTML GENERADOR CONTRASEÑA-------------------------->
+
+      <div class="contenedor-contraseña">
+        <div class="contenedor-titulo">
+          <h2>Crea tu contraseña segura<span class="material-icons">lock</span></h2>
+        </div>
+
+        <div class="contenedor-subtitulo">
+          <h3>Introduce número de caracteres de la Contraseña:</h3>
+        </div>
+
+        <div class="contenedor-selector">
+          <input type="number" min="12" max="50" class="form-control" id="longitud-Contraseña" placeholder="12" ></input>
+          <button id="generar-contraseña">Generar contraseña</button>
+        </div>
+
+        <div class="contenedor-mostrar-contraseña">
+          <h3 id="mostrar-contraseña"></h3>
+        </div>
+
+     </div>  
+
+  <!---------------------------LINKS INTERÉS---------------------------------->
+      <div class="contenedor-links">
+
+        <div class="contenedor-titulo">
+          <h2 class="titulo" >Añade tu enlace de interés<span class="material-icons">link</span></h2>
+        </div>
+
+        <div class="contenedor-tituloLink">
+          <input type="text" class="tituloLink" id="tituloLink" placeholder="Nombre de tu enlace"></input>
+        </div>
+
+        <div class="contenedor-urlLink">
+          <input type="text"class="urlLink" id="urlLink" placeholder="Pega aquí la URL"></input> 
+        </div>
+
+        <div class="contenedor-botonAñadir">
+          <button class="botonAñadir" id="botonAñadir">Añadir enlace</button>
+        </div>
+
+        <div class="contenedor-listado-links">
+          <ul id="lista"></ul>
+        </div>
+
+        <div class="contenedor-url">
+          <a href="javascript:('url')" target="_blank" id="url"></a>
+        </div>
+        
+      </div>
+
+      <!---------------------------ESTACIÓN METEOROLÓGICA---------------------------------->
+      <div id="app"></div>
+  </header>
+      <script src="./js/reloj.script.js"></script> <!---JAVA SC RELOJ DIGITAL--->
+      <script src="./js/contraseñas.script.js"></script><!---JAVA CONTRASEÑAS--->
+      <script src="./js/background.script.js"></script><!---JAVA SC BACKGROUND PAGE--->
+      <script src="./js/links.script.js"></script><!---JAVA SC LINKS--->
+      <script src="./js/estacion.meteo.script.js"></script><!---JAVA SC ESTACIÓN METEOROLÓGICA--->
+  </body>  
+</html>
+
+
+
+
+
+
+
+
