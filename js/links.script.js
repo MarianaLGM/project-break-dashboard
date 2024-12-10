@@ -18,8 +18,6 @@ También tendrá un botón de eliminar si ya no vamos a hacer uso de él.
 - Cuando se carga la página el dato del `LocalStorage` deberá aparecer de inicio
 */
 
-
-
 const tituloLink= document.getElementById ("tituloLink");//donde pongo el nombre del link
 const urlLink= document.getElementById ("urlLink"); //donde meto URL link
 const botonAñadir= document.getElementById ("botonAñadir");//botón añadir link
@@ -34,16 +32,19 @@ const añadirLink= ()=>{
       listaLinks.classList.add ("listaLinks")
       listaLinks.innerHTML=tituloLink.value;
       const link=(urlLink.value) //meto el valor de urlLink en una variable para luego llamarla a la hora de querer abrir la URL
+      
+ //GRABAR LOCAL STORAGE    
+ localStorage.setItem("links", JSON.stringify(listaLinks)) //o link??
 //ACCEDER URL LINK
     function abrirlUrl() {
     listaLinks.addEventListener("click", ()=>{
     window.open(link);///cambiar urlLink por una variable que recoja el campo url y que cambie constantemente
-      
-
-    localStorage.setItem("links", listaLinks)
+   
 }
+
   )}
 abrirlUrl()
+
 //CREAMOS BOTÓN ELIMINAR LINK
   const btnEliminarLink=document.createElement("button")
   btnEliminarLink.classList.add ("btnEliminarLink")
@@ -53,9 +54,12 @@ abrirlUrl()
     btnEliminarLink.addEventListener("click", ()=>{
         listaLinks.remove();//eliminar link
         btnEliminarLink.parentNode.removeChild(btnEliminarLink);//para eliminar la X a la vez que elimino el link 
+              
     }) 
+
     })
 }
+
 añadirLink();
 
 
@@ -88,6 +92,5 @@ const backgroundsLinks=[
     const url= backgroundsLinks[Math.floor(Math.random()*backgroundsLinks.length)];
     document.body.style.backgroundImage = 'url('+url+')';
     },9000);
-
 
 
