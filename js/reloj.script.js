@@ -41,19 +41,16 @@ function obtenerFecha (){
     
     const hoy = fecha.getDate();
     const mesActual = fecha.getMonth() + 1; 
-    
+
+
     const diaActual=document.getElementById ("dia-mes-año")
       diaActual.textContent=`
       ${hoy}/${mesActual}/${añoActual}
     `;
 }
 obtenerFecha();
-setInterval(obtenerFecha,1000); //ver si cambia automáticamente mañana la fecha
+setInterval(obtenerFecha,1000); 
 
-
-
-
-//Cambiar formato hora para luego usar condicional y mostrar frases según franja horaria (toLocaleString)
 
 //convirtiendo el formato hh:mm:ss en hh:mm y en string para poder comparar con las "franjas horarias"
 let formatoHoraMinutos = new Date();

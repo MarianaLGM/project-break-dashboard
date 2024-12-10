@@ -102,7 +102,7 @@ body{
     color:  #dee9f1;
 }
 
-/*contenedor input y boton*/
+/*contenedor input*/
 .contenedor-selector{
     display: flex;
     flex-wrap: wrap;
@@ -113,8 +113,20 @@ body{
     margin-top:-25px;
 }
 
+/*contenedor boton*/
+.contenedor-boton{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap:15px;
+    padding-top: 5px;
+    margin-top:-25px;
+    margin-left: 15px;
+}
+
 /*boton generar contraseña*/
-#generar-contraseña{
+#botonGenerar{
     border-radius: 15px  #0f3854;
     background-color: #245779;
     font-family:"Space Mono", serif;
@@ -123,7 +135,7 @@ body{
     cursor: pointer;
 }
 
-#longitud-Contraseña{
+#longitudInput{
     border-radius: 15px  #0f3854;
     background-color:#d1dfe9;
     font-family:"Space Mono", serif;
@@ -138,9 +150,11 @@ body{
     height: 30px;
     border-radius: 15px;
     margin-top:15px;
+    padding-top: 15px;
+    font-size: 10px;
 }
 /*campos donde se muestra la contraseña*/
-#mostrar-contraseña{
+#resultadoContraseña{
     color:  #0f3854;
     display: flex;
     flex-wrap: wrap;
@@ -148,6 +162,7 @@ body{
     align-items: center;
     font-size: 10px;
     font-family:"Space Mono", serif;
+    
 }
 
 /*---------------------------LINKS INTERÉS----------------------------------*/
@@ -217,8 +232,6 @@ body{
 .contenedor-listado-links{
     display: flex;
     flex-wrap: wrap;
-    justify-content:center;
-    align-items: center;
     width: 400px;
     height: 200px;
     margin-left: 15px;    
@@ -234,14 +247,11 @@ body{
     font-family:"Space Mono", serif;
     color:  #d1dfe9;
     margin-top: 25px;
-    width: 90px;
+    width: 150px;
     height: 35px;
     text-decoration: underline;
-
     margin-top: 50px;
     margin-bottom: -45px;
-    background-color: rgba(51, 51, 51, 0.776);
-    border-radius: 15px;
     cursor: pointer;
    
 }
@@ -255,7 +265,7 @@ body{
     background-color: #d1dfe9;
     color:#2a2b2c;
     cursor: pointer;
-    margin-left: 15px;
+    margin-left: 25px;
     display: flex;
     justify-content:center;
     align-items: center;

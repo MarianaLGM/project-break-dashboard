@@ -23,42 +23,52 @@ También tendrá un botón de eliminar si ya no vamos a hacer uso de él.
 const tituloLink= document.getElementById ("tituloLink");//donde pongo el nombre del link
 const urlLink= document.getElementById ("urlLink"); //donde meto URL link
 const botonAñadir= document.getElementById ("botonAñadir");//botón añadir link
-const lista=document.getElementById("lista");//lista de links 
-const url =document.getElementById("Url");
-    
+
+//en LINK tengo guardado cada uno de los links y en LISTALINKS tengo guardados los títulos de los links
+
 //AÑADIR LINK
 const añadirLink= ()=>{
     botonAñadir.addEventListener("click", ()=>{
-        const listaLinks=document.createElement("li")
-        listaLinks.classList.add ("listaLinks")
-        listaLinks.innerHTML=tituloLink.value;
 
+      const listaLinks=document.createElement("li")
+      listaLinks.classList.add ("listaLinks")
+      listaLinks.innerHTML=tituloLink.value;
+      const link=(urlLink.value) //meto el valor de urlLink en una variable para luego llamarla a la hora de querer abrir la URL
+//ACCEDER URL LINK
+    function abrirlUrl() {
+    listaLinks.addEventListener("click", ()=>{
+    window.open(link);///cambiar urlLink por una variable que recoja el campo url y que cambie constantemente
+      
+
+    localStorage.setItem("links", listaLinks)
+}
+  )}
+abrirlUrl()
 //CREAMOS BOTÓN ELIMINAR LINK
-        const btnEliminarLink=document.createElement("button")
-        btnEliminarLink.classList.add ("btnEliminarLink")
-        btnEliminarLink.innerHTML="X"
+  const btnEliminarLink=document.createElement("button")
+  btnEliminarLink.classList.add ("btnEliminarLink")
+  btnEliminarLink.innerHTML="X"
     lista.appendChild(listaLinks);  
     lista.appendChild(btnEliminarLink);
     btnEliminarLink.addEventListener("click", ()=>{
         listaLinks.remove();//eliminar link
-        btnEliminarLink.parentNode.removeChild(btnEliminarLink);//para eliminar la X a la vez que elimino el link  
+        btnEliminarLink.parentNode.removeChild(btnEliminarLink);//para eliminar la X a la vez que elimino el link 
     }) 
     })
 }
 añadirLink();
 
+
 //LOCAL STORAGE
 //guardar datos Local Storage ***localStorage.setItem("titulo", "Curso de Angular avanzado - Víctor Robles");***
 //guardar objetos Local Storage ***localStorage.setItem("usuario", JSON.stringify(mi_objeto));***
 //borrar link Local Storage ***localStorage.removeItem("titulo");***
+/*
+const linksInteres = document.querySelector(".link").value
+listaLinks.textContent = link; // prueba grabar local storage
+localStorage.setItem("link", linksInteres)
 
-
-//ACCEDER URL LINK
-function accederUrl() {
-    url= document.getElementsByClassName('url').href;
-
-    window.location.href = listaLinks;
-    }
+localStorage.setItem('Ejemplo','imagendeejemplo.png')*/
 
 /*------------------------------BACKGROUNDS----------------------------------*/
 
@@ -78,5 +88,6 @@ const backgroundsLinks=[
     const url= backgroundsLinks[Math.floor(Math.random()*backgroundsLinks.length)];
     document.body.style.backgroundImage = 'url('+url+')';
     },9000);
+
 
 

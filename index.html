@@ -26,35 +26,37 @@
       </div>
     </nav>
    <!----------------------HTML RELOJ DIGITAL------------------------------>
-      <div class="contenedor-dia-hora">
-        <div class="reloj" id="reloj"></div>
-        <div class="dia-mes-año" id="dia-mes-año"></div>
-      </div> 
-      <div class="contenedor-frases">
-        <div class="frases" id="frases"></div>
-      </div>
+    <div class="contenedor-dia-hora">
+      <div class="reloj" id="reloj"></div>
+      <div class="dia-mes-año" id="dia-mes-año"></div>
+    </div> 
+    <div class="contenedor-frases">
+      <div class="frases" id="frases"></div>
+    </div>
    
    <!--------------------HTML GENERADOR CONTRASEÑA-------------------------->
+    <div class="contenedor-contraseña">
+      <div class="contenedor-titulo">
+        <h2>Crea tu contraseña segura<span class="material-icons">lock</span></h2>
+      </div>
 
-      <div class="contenedor-contraseña">
-        <div class="contenedor-titulo">
-          <h2>Crea tu contraseña segura<span class="material-icons">lock</span></h2>
-        </div>
+      <div class="contenedor-subtitulo">
+        <h3>Introduce número de caracteres de la Contraseña:</h3>
+       </div>
 
-        <div class="contenedor-subtitulo">
-          <h3>Introduce número de caracteres de la Contraseña:</h3>
-        </div>
+      <div class="contenedor-selector">
+        <label for="longitudInput" class="form-label"></label>
+        <input type="number" id="longitudInput" class="form-control text-center" min="12" max="50" placeholder="12" />
+      </div>
 
-        <div class="contenedor-selector">
-          <input type="number" min="12" max="50" class="form-control" id="longitud-Contraseña" placeholder="12" ></input>
-          <button id="generar-contraseña">Generar contraseña</button>
-        </div>
+      <div class="contenedor-boton">
+        <button id="botonGenerar">Generar contraseña</button>
+      </div>
 
-        <div class="contenedor-mostrar-contraseña">
-          <h3 id="mostrar-contraseña"></h3>
-        </div>
-
-     </div>  
+      <div class="contenedor-mostrar-contraseña">
+        <span id="resultadoContraseña"></span>
+      </div>
+    </div>  
 
   <!---------------------------LINKS INTERÉS---------------------------------->
       <div class="contenedor-links">
@@ -69,20 +71,18 @@
 
         <div class="contenedor-urlLink">
           <input type="text"class="urlLink" id="urlLink" placeholder="Pega aquí la URL"></input> 
-        </div>
+       
+        </div>      
 
         <div class="contenedor-botonAñadir">
           <button class="botonAñadir" id="botonAñadir">Añadir enlace</button>
         </div>
 
         <div class="contenedor-listado-links">
-          <ul id="lista"></ul>
+          <ul id="lista" target="_blank" onclick="location.href='javascript:abrirlUrl()'"></ul>
+          
         </div>
-
-        <div class="contenedor-url">
-          <a href="javascript:('url')" target="_blank" id="url"></a>
-        </div>
-        
+       
       </div>
 
       <!---------------------------ESTACIÓN METEOROLÓGICA---------------------------------->
