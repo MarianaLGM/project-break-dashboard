@@ -27,8 +27,10 @@ const botonAñadir= document.getElementById ("botonAñadir");//botón añadir li
 //AÑADIR LINK
 const añadirLink= ()=>{
     botonAñadir.addEventListener("click", ()=>{
-    localStorage.setItem("linksFavoritos", JSON.stringify(listaLinks));
+//GUARDAR LOCAL STORAGE      
+    localStorage.setItem("linksFavoritos", "listaLinks");
     console.log("LOCAL STORAGE" +localStorage.getItem("linksFavoritos"));//linksFavoritos es la KEY
+
       const listaLinks=document.createElement("li")
       listaLinks.classList.add ("listaLinks")
       listaLinks.innerHTML=tituloLink.value;
