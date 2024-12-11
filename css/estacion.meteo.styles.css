@@ -1,0 +1,96 @@
+
+/*------------------------------BACKGROUNDS----------------------------------*/
+body{
+    background-image:url(../assets/img/Asturias1.jpg);   
+}  
+
+
+/*----------------------------------MENÚ y FOOTER-----------------------------------*/
+/*footer*/
+.footerMenu{
+    display: flex;
+    justify-content:center;
+    align-items: end;
+    margin-top: 100px;
+    background-color: rgba(39, 39, 39, 0.576);
+    color: #e2e6e8;
+
+}
+
+/*footer cada icono*/
+.footer{
+    color: #a9c7dc;
+    padding: 15px;
+
+}
+
+/*icono home*/
+.home{
+    font-family:"Share Tech Mono", serif;
+    color:  #102f44;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+
+/*contenedor grande cabecera*/
+#infoActual{
+    display: flex;
+    flex-direction: wrap;
+    justify-content: center; 
+    align-items: center;
+    border:  #0f3854 solid;
+    border-radius: 20px;
+    margin-left:360px;
+    height:750px;
+    width: 700px;
+    background-color: rgba(39, 39, 39, 0.576);
+}
+
+
+/*contenedor ciudad, pais, estado tiempo y foto*/
+.contenedor1{
+    display: block;
+    justify-content: center; 
+    align-items: center;
+    font-family:"Share Tech Mono", serif;
+    color:  #d1dfe9;
+    font-size: 16px;
+    margin-right: 60px;
+    margin-left:20px;
+    margin-top:-500px;
+}
+
+
+/*contenedor grados*/
+.contenedor2{
+    display: block;
+    justify-content: center; 
+    align-items: center;
+    font-family:"Share Tech Mono", serif;
+    color:  #102f44;
+    -webkit-text-stroke: 0.2px #fafdff;
+    font-size: 60px;
+    margin-right: 60px;
+    margin-top:-500px;
+
+}
+
+/*contenedor precipitaciones, humedad y viento*/
+.contenedor3{
+    display: block;
+    justify-content: center; 
+    align-items: center;
+    font-family:"Share Tech Mono", serif;
+    color:   #d1dfe9;
+    font-size: 16px;
+    margin-right: 20px;
+    margin-top:-500px;
+}
+
+/*contenedor grande de los datos por horas*/
+#infoPorHoras{
+    display: flex;
+    justify-content: center;   
+}
