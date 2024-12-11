@@ -237,8 +237,6 @@ body{
     width: 400px;
     height: 200px;
     margin-left: 15px; 
-
-
 }
 
  
@@ -281,12 +279,11 @@ body{
 /*contenedor grande cabecera*/
 #infoActual{
     display: flex;
-    flex-wrap: wrap;
     justify-content: center; 
     align-items: center;
     border:  #0f3854 solid;
     border-radius: 20px;
-    margin-top: -760px;
+    
     margin-left:600px;
     height:750px;
     width: 850px;
@@ -337,7 +334,6 @@ body{
 /*contenedor grande de los datos por horas*/
 #infoPorHoras{
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;   
 }
 

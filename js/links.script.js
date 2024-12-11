@@ -18,18 +18,24 @@ También tendrá un botón de eliminar si ya no vamos a hacer uso de él.
 - Cuando se carga la página el dato del `LocalStorage` deberá aparecer de inicio
 */
 
+
+
 const tituloLink= document.getElementById ("tituloLink");//donde pongo el nombre del link
 const urlLink= document.getElementById ("urlLink"); //donde meto URL link
 const botonAñadir= document.getElementById ("botonAñadir");//botón añadir link
 
-//en LINK tengo guardado cada uno de los links y en LISTALINKS tengo guardados los títulos de los links
+
+
+//GUARDAR LOCAL STORAGE      
+localStorage.setItem("linksFavoritos", "link");
+console.log(localStorage.getItem("linksFavoritos"));//linksFavoritos es la KEY
+localStorage.getItem("linksFavoritos")
+console.log(link)
+
 
 //AÑADIR LINK
 const añadirLink= ()=>{
     botonAñadir.addEventListener("click", ()=>{
-//GUARDAR LOCAL STORAGE      
-    localStorage.setItem("linksFavoritos", "listaLinks");
-    console.log("LOCAL STORAGE" +localStorage.getItem("linksFavoritos"));//linksFavoritos es la KEY
 
       const listaLinks=document.createElement("li")
       listaLinks.classList.add ("listaLinks")
@@ -66,9 +72,11 @@ añadirLink();
 //guardar datos Local Storage ***localStorage.setItem("titulo", "Curso de Angular avanzado - Víctor Robles");***
 //guardar objetos Local Storage ***localStorage.setItem("usuario", JSON.stringify(mi_objeto));***
 //borrar link Local Storage ***localStorage.removeItem("titulo");***
-//localStorage.setItem("linksFavoritos", JSON.stringify(listaLinks));
-  //console.log("LOCAL STORAGE" +localStorage.getItem("linksFavoritos"));//linksFavoritos es la KEY
+/*
 
+
+
+localStorage.setItem('Ejemplo','imagendeejemplo.png')*/
 
 /*------------------------------BACKGROUNDS----------------------------------*/
 
