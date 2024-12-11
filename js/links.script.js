@@ -27,7 +27,8 @@ const botonAñadir= document.getElementById ("botonAñadir");//botón añadir li
 //AÑADIR LINK
 const añadirLink= ()=>{
     botonAñadir.addEventListener("click", ()=>{
-
+    localStorage.setItem("linksFavoritos", JSON.stringify(listaLinks));
+    console.log("LOCAL STORAGE" +localStorage.getItem("linksFavoritos"));//linksFavoritos es la KEY
       const listaLinks=document.createElement("li")
       listaLinks.classList.add ("listaLinks")
       listaLinks.innerHTML=tituloLink.value;
@@ -63,7 +64,9 @@ añadirLink();
 //guardar datos Local Storage ***localStorage.setItem("titulo", "Curso de Angular avanzado - Víctor Robles");***
 //guardar objetos Local Storage ***localStorage.setItem("usuario", JSON.stringify(mi_objeto));***
 //borrar link Local Storage ***localStorage.removeItem("titulo");***
-/*
+//localStorage.setItem("linksFavoritos", JSON.stringify(listaLinks));
+  //console.log("LOCAL STORAGE" +localStorage.getItem("linksFavoritos"));//linksFavoritos es la KEY
+
 
 
 
