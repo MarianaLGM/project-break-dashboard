@@ -49,6 +49,7 @@ body{
     font-family: "Orbitron", sans-serif;
     display: block;
     align-items: center;
+    justify-content: center;
     width:100%;
     height: 50px;
     color: white;
@@ -77,13 +78,13 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 435px;
+    width: 450px;
     height: 230px;
     border:  #0f3854 solid;
     border-radius: 20px;
     margin-top: 20px;
     margin-left: 110px;
-    background-color: rgba(51, 51, 51, 0.476);
+    background-color: rgba(39, 39, 39, 0.576);
 }
 
 /*contenedor titulo*/
@@ -91,14 +92,14 @@ body{
     font-size: 17px;
     font-family: "Audiowide", sans-serif;
     color:  #102f44;
-    -webkit-text-stroke: 0.5px #dee9f1;
+    -webkit-text-stroke: 0.3px  #dee9f1;
     margin-bottom: -15px;
 }
 
 /*contenedor sub-titulo*/
 .contenedor-subtitulo{
-    font-size: 12px;
-    font-family:"Space Mono", serif;
+    font-size: 13px;
+    font-family:"Share Tech Mono", serif;
     color:  #dee9f1;
 }
 
@@ -128,9 +129,9 @@ body{
 /*boton generar contraseña*/
 #botonGenerar{
     border-radius: 15px  #0f3854;
-    background-color: #245779;
+    background-color: #1e4762;
     font-family:"Space Mono", serif;
-    font-size: 12px;
+    font-size: 14px;
     color: #a9c7dc;
     cursor: pointer;
 }
@@ -147,11 +148,10 @@ body{
 .contenedor-mostrar-contraseña{
     background-color:#d1dfe9;
     width: 390px;
-    height: 30px;
+    height: 22px;
     border-radius: 15px;
     margin-top:15px;
     padding-top: 15px;
-    font-size: 10px;
 }
 /*campos donde se muestra la contraseña*/
 #resultadoContraseña{
@@ -160,9 +160,9 @@ body{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    font-size: 10px;
+    font-size: 11px;
     font-family:"Space Mono", serif;
-    
+    margin-top: -5px;
 }
 
 /*---------------------------LINKS INTERÉS----------------------------------*/
@@ -171,20 +171,20 @@ body{
 .contenedor-links{
     display: block;
     justify-content: center;
-    width: 435px;
+    width: 450px;
     height: 230px;
     border:  #0f3854 solid;
     border-radius: 20px;
     margin-top: 20px;
     margin-left: 110px;
     height: 500px;
-    background-color: rgba(51, 51, 51, 0.576);
+    background-color: rgba(39, 39, 39, 0.576);
 }
 
 /*boton añadir enlace*/
 .botonAñadir{
     font-family:"Space Mono", serif;
-    background-color: #245779;
+    background-color: #1e4762;
     cursor: pointer;
     font-size: 15px;  
     width: 350px;
@@ -205,8 +205,8 @@ body{
     display: flex;
     justify-content: center;
     font-size: 25px;
-    font-family: "Audiowide", sans-serif;
-    color:  #0f3854;
+    color:  #102f44;
+    -webkit-text-stroke: 0.3px #dee9f1;
     margin-bottom: -15px;
     padding: 15px;
 }
@@ -232,9 +232,13 @@ body{
 .contenedor-listado-links{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     width: 400px;
     height: 200px;
-    margin-left: 15px;    
+    margin-left: 15px; 
+
+
 }
 
  
@@ -274,17 +278,105 @@ body{
 
 /*---------------------------ESTACIÓN METEOROLÓGICA----------------------------------*/
 
-/*contenedor grande de los links*/
-#app{
+/*contenedor grande cabecera*/
+#infoActual{
     display: flex;
     flex-wrap: wrap;
     justify-content: center; 
-    align-items: center; 
+    align-items: center;
     border:  #0f3854 solid;
     border-radius: 20px;
-    margin-top: -700px;
-    margin-left:650px;
-    height: 400px;
-    width: 700px;
-    background-color: rgba(51, 51, 51, 0.576);
+    margin-top: -760px;
+    margin-left:600px;
+    height:750px;
+    width: 850px;
+    background-color: rgba(39, 39, 39, 0.576);
+}
+
+
+/*contenedor ciudad, pais, estado tiempo y foto*/
+.contenedor1{
+    display: block;
+    justify-content: center; 
+    align-items: center;
+    font-family:"Share Tech Mono", serif;
+    color:  #d1dfe9;
+    font-size: 16px;
+    margin-right: 60px;
+    margin-left:20px;
+    margin-top:-500px;
+}
+
+
+/*contenedor grados*/
+.contenedor2{
+    display: block;
+    justify-content: center; 
+    align-items: center;
+    font-family:"Share Tech Mono", serif;
+    color:  #102f44;
+    -webkit-text-stroke: 0.2px #fafdff;
+    font-size: 60px;
+    margin-right: 60px;
+    margin-top:-500px;
+
+}
+
+/*contenedor precipitaciones, humedad y viento*/
+.contenedor3{
+    display: block;
+    justify-content: center; 
+    align-items: center;
+    font-family:"Share Tech Mono", serif;
+    color:   #d1dfe9;
+    font-size: 16px;
+    margin-right: 20px;
+    margin-top:-500px;
+}
+
+/*contenedor grande de los datos por horas*/
+#infoPorHoras{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;   
+}
+
+
+/*logo API
+#weatherAPI{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 550px;
+    margin-bottom: 1300px;
+    width: 10px;
+    height: 10px;
+}
+*/
+
+
+/*footer*/
+.footerMenu{
+    display: flex;
+    justify-content:center;
+    align-items: end;
+    margin-top: 300px;
+    background-color: rgba(39, 39, 39, 0.576);
+    color: #e2e6e8;
+
+}
+
+/*footer cada icono*/
+.footer{
+    color: #a9c7dc;
+    padding: 15px;
+
+}
+
+/*icono home*/
+.home{
+    font-family:"Share Tech Mono", serif;
+    color:  #102f44;
+    text-decoration: none;
+    font-size: 20px;
 }

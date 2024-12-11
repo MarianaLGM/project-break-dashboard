@@ -28,7 +28,6 @@ function actualizarReloj() {
   
 }
 
-
 setInterval(actualizarReloj,1000); //los segundos deben cambiar automaticamente en pantalla
 
 actualizarReloj();//llamo a la function
@@ -95,6 +94,7 @@ function mostrarMensaje (){
 }
 
 mostrarMensaje()
+
 
 
 /*------------------------------BACKGROUNDS----------------------------------*/

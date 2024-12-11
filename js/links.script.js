@@ -32,35 +32,31 @@ const añadirLink= ()=>{
       listaLinks.classList.add ("listaLinks")
       listaLinks.innerHTML=tituloLink.value;
       const link=(urlLink.value) //meto el valor de urlLink en una variable para luego llamarla a la hora de querer abrir la URL
-      
- //GRABAR LOCAL STORAGE    
- localStorage.setItem("links", JSON.stringify(listaLinks)) //o link??
 //ACCEDER URL LINK
     function abrirlUrl() {
-    listaLinks.addEventListener("click", ()=>{
-    window.open(link);///cambiar urlLink por una variable que recoja el campo url y que cambie constantemente
-   
-}
-
-  )}
-abrirlUrl()
-
+      listaLinks.addEventListener("click", ()=>{
+      window.open(link);///cambiar urlLink por una variable que recoja el campo url y que cambie constantemente
+    }
+    )}
+    abrirlUrl()
 //CREAMOS BOTÓN ELIMINAR LINK
-  const btnEliminarLink=document.createElement("button")
-  btnEliminarLink.classList.add ("btnEliminarLink")
-  btnEliminarLink.innerHTML="X"
+    const btnEliminarLink=document.createElement("button")
+    btnEliminarLink.classList.add ("btnEliminarLink")
+    btnEliminarLink.innerHTML="X"
     lista.appendChild(listaLinks);  
     lista.appendChild(btnEliminarLink);
     btnEliminarLink.addEventListener("click", ()=>{
         listaLinks.remove();//eliminar link
-        btnEliminarLink.parentNode.removeChild(btnEliminarLink);//para eliminar la X a la vez que elimino el link 
-              
-    }) 
-
+        btnEliminarLink.parentNode.removeChild(btnEliminarLink);//para eliminar la X a la vez que elimino el link       
     })
+    })
+
 }
 
 añadirLink();
+
+
+
 
 
 //LOCAL STORAGE
@@ -68,9 +64,8 @@ añadirLink();
 //guardar objetos Local Storage ***localStorage.setItem("usuario", JSON.stringify(mi_objeto));***
 //borrar link Local Storage ***localStorage.removeItem("titulo");***
 /*
-const linksInteres = document.querySelector(".link").value
-listaLinks.textContent = link; // prueba grabar local storage
-localStorage.setItem("link", linksInteres)
+
+
 
 localStorage.setItem('Ejemplo','imagendeejemplo.png')*/
 
@@ -92,5 +87,6 @@ const backgroundsLinks=[
     const url= backgroundsLinks[Math.floor(Math.random()*backgroundsLinks.length)];
     document.body.style.backgroundImage = 'url('+url+')';
     },9000);
+
 
 
