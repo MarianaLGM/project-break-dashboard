@@ -68,10 +68,6 @@ añadirLink();
   //console.log("LOCAL STORAGE" +localStorage.getItem("linksFavoritos"));//linksFavoritos es la KEY
 
 
-
-
-localStorage.setItem('Ejemplo','imagendeejemplo.png')*/
-
 /*------------------------------BACKGROUNDS----------------------------------*/
 
 const backgroundsLinks=[
