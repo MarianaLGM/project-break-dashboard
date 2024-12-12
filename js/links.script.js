@@ -18,6 +18,7 @@ También tendrá un botón de eliminar si ya no vamos a hacer uso de él.
 - Cuando se carga la página el dato del `LocalStorage` deberá aparecer de inicio
 */
 /*
+
 //TRAER ELEMENTOS DEL DOM
 const tituloLink= document.getElementById ("tituloLink");//donde pongo el nombre del link
 const urlLink= document.getElementById ("urlLink"); //donde meto URL link
@@ -40,13 +41,6 @@ const currentLink = JSON.parse(localStorage.getItem("linksInteres")) || [];
     localStorage.setItem("linksInteres", JSON.stringify(currentLink));
 
 // Cargar los links almacenados en localStorage al cargar la página
-
-
-
-
-
-
-
 
 //ACCEDER URL LINK
     function abrirlUrl() {
@@ -93,13 +87,12 @@ const backgroundsLinks=[
     document.body.style.backgroundImage = 'url('+url+')';
     },9000);
 
+////////////////////////////////////////PRUEBA////////////////////////////////////////////
 
 //TRAER ELEMENTOS DEL DOM
 const tituloLink= document.getElementById ("tituloLink");//donde pongo el nombre del link
 const urlLink= document.getElementById ("urlLink"); //donde meto URL link
 const botonAñadir= document.getElementById ("botonAñadir");//botón añadir link
-
-
 
 //AÑADIR LINK
 const añadirLink= ()=>{
