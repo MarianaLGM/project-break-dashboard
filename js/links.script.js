@@ -17,7 +17,7 @@ También tendrá un botón de eliminar si ya no vamos a hacer uso de él.
 - Guarda el dato en el `localStorage` a la vez que se crea en el `DOM`
 - Cuando se carga la página el dato del `LocalStorage` deberá aparecer de inicio
 */
-/*
+
 
 //TRAER ELEMENTOS DEL DOM
 const tituloLink= document.getElementById ("tituloLink");//donde pongo el nombre del link
@@ -41,6 +41,9 @@ const currentLink = JSON.parse(localStorage.getItem("linksInteres")) || [];
     localStorage.setItem("linksInteres", JSON.stringify(currentLink));
 
 // Cargar los links almacenados en localStorage al cargar la página
+const storedLinks = JSON.parse(localStorage.getItem("linksInteres"));
+    listaLinks.textContent = tituloLink.value;
+
 
 //ACCEDER URL LINK
     function abrirlUrl() {
@@ -64,7 +67,7 @@ const currentLink = JSON.parse(localStorage.getItem("linksInteres")) || [];
 añadirLink();
 
 
-*/
+
 
 
 
@@ -88,7 +91,7 @@ const backgroundsLinks=[
     },9000);
 
 ////////////////////////////////////////PRUEBA////////////////////////////////////////////
-
+/*
 //TRAER ELEMENTOS DEL DOM
 const tituloLink= document.getElementById ("tituloLink");//donde pongo el nombre del link
 const urlLink= document.getElementById ("urlLink"); //donde meto URL link
@@ -110,7 +113,7 @@ const currentLink = JSON.parse(localStorage.getItem("linksInteres")) || [];
 
 // Cargar los links almacenados en localStorage al cargar la página
 const storedLinks = JSON.parse(localStorage.getItem("linksInteres"));
-    listaLinks.textContent = link;
+    listaLinks.textContent = tituloLink.value;
   
 
 //ACCEDER URL LINK
@@ -120,6 +123,7 @@ const storedLinks = JSON.parse(localStorage.getItem("linksInteres"));
     }
     )}
     abrirlUrl()
+
 //CREAMOS BOTÓN ELIMINAR LINK
     const btnEliminarLink=document.createElement("button")
     btnEliminarLink.classList.add ("btnEliminarLink")
@@ -127,14 +131,14 @@ const storedLinks = JSON.parse(localStorage.getItem("linksInteres"));
     lista.appendChild(listaLinks);  
     lista.appendChild(btnEliminarLink);
     btnEliminarLink.addEventListener("click", ()=>{
-        listaLinks.remove();//eliminar link
-        btnEliminarLink.parentNode.removeChild(btnEliminarLink);//para eliminar la X a la vez que elimino el link       
+        listaLinks.remove();//eliminar link 
+        btnEliminarLink.parentNode.removeChild(btnEliminarLink);//para eliminar la X a la vez que elimino el link   
     })
     })
+  
 }
 añadirLink();
-
-
+*/
 
 
 
