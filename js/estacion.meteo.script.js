@@ -23,8 +23,7 @@ y dándole al botón de `show response`
 //documentación completa `https://www.weatherapi.com/docs/`
 //API KEY. a464065dd0fc4a379b095151240212--------API ("https://api.weatherapi.com/v1/forecast.json?key=a464065dd0fc4a379b095151240212&q=Oviedo&aqi=no");
 //Usa `promesas` o `ASYNC/AWAIT`. Piensa si necesitas solo un endpoint o varios. 
-
-
+/*
 const infoActual=document.getElementById("infoActual")
 
 //PETICIÓN FETCH
@@ -49,7 +48,7 @@ const getEstacionMeteo = async () => {
       const contenedor1 = document.createElement("div"); //creo un nuevo contenedor donde voy a meter todos esos datos api
       contenedor1.classList.add("contenedor1");
       contenedor1.innerHTML = `
-      <h3>${data.location.name.toUpperCase()} / ${data.location.country}</h3>
+      <h3>${data.location.name} / ${data.location.country}</h3>
       <h3>${data.current.condition.text}</h3>
       <img id="tiempoOviedo"  alt="Oviedo" src="${data.current.condition.icon}"/>
        `;
@@ -76,14 +75,33 @@ const getEstacionMeteo = async () => {
     };
 
     tiempoHoy();
+
+    const getInfoPorHoras=(days)=> {
+      days.forEach(()=>{ 
+        const infoPorHoras= document.getElementById("infoPorHoras"); //contenedor grande
+        let contenedor4= document.createElement("div"); //contenedor foto y nombre
+        contenedor4.innerHTML =` 
+        <h3>${days.forecast.forecastday.hour} </h3> 
+        <h3>${days.forecast.forecastday.hour.temp_c} </h3>
+        <h3>${days.forecast.forecastday.hour.condition.icon[0]} </h3>
+        `;
+        infoPorHoras.appendChild(contenedor4);s
+       })
+      };
+
+
+getInfoPorHoras()
+
   } catch (error) {
     //este catch sería el catch de la promesa async
     console.log("error al obtener los datos", error);
   }
-
+  
 };
 
-getEstacionMeteo(); //llamar a la function
+
+
+getEstacionMeteo(); //llamar a la function*/
 
 /*------------------------------BACKGROUNDS----------------------------------*/
 
@@ -106,7 +124,7 @@ setInterval (function(){
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
-
+/*
 const infoPorHoras=document.getElementById("infoPorHoras")
 
 //PETICIÓN FETCH
@@ -125,27 +143,156 @@ const getInfoPorHoras = async () => {
     console.log("El valor de datos es: ", datos);
     console.log("el valor de response es:", response);
 
-    const tiempoPorHoras = ()=> {
+    const tiempoPorHoras = () => {
       console.log("datos", datos);
-//contenedor 4
 
-    const contenedor4 = document.createElement("li"); //creo un nuevo contenedor donde voy a meter todos esos datos api
-    contenedor4.classList.add("contenedor4");
-    contenedor4.innerHTML = ` 
-      <h3>${datos.forecast.forecastday.hour}</h3> 
-      <h3>${datos.forecast.forecastday.hour.temp_c} </h3>
-      <h3>${datos.forecast.forecastday.hour.condition.icon[0]} </h3>
-    `;
-    infoPorHoras.appendChild(contenedor4);
+//contenedor 4
+const contenedor4 = document.createElement("li"); //creo un nuevo contenedor donde voy a meter todos esos datos api
+contenedor4.classList.add("contenedor4");
+contenedor4.innerHTML = ` 
+  <h3>${datos.forecast.forecastday.hour} </h3> 
+  <h3>${datos.forecast.forecastday.hour.temp_c} </h3>
+  <h3>${datos.forecast.forecastday.hour.condition.icon[0]} </h3>
+`;
+infoPorHoras.appendChild(contenedor4);
     };
 
     tiempoPorHoras();
-    } catch (error) {
+  } catch (error) {
     //este catch sería el catch de la promesa async
     console.log("error al obtener los datos", error);
   }
 
 };
 
-  getInfoPorHoras (); //llamar a la function
+getInfoPorHoras (); //llamar a la function
 
+
+
+function getInfoPorHoras (){
+  const infoPorHoras=document.getElementById("infoPorHoras");
+  infoPorHoras.innerHTML=""
+  fetch("https://api.weatherapi.com/v1/forecast.json?key=a464065dd0fc4a379b095151240212&q=Oviedo&days=1&lang=es")
+    .then((response)=>response.json()) //respuesta del servidor 
+    .then((datos)=>{
+      console.log(datos)
+      console.log(datos.results)
+      
+      data.results.forEach((elements) => {
+        const contenedor4=document.createElement("li") //creo un nuevo contenedor donde voy a meter todos esos datos api 
+        contenedor4.classList.add ("contenedor4")
+        //añado imagen, name y species
+        nuevoContenedorJs.innerHTML= `  
+        <h3>${elements.forecast.forecastday.hour} </h3> 
+        <h3>${elements.forecast.forecastday.hour.temp_c} </h3>
+        <h3>${elements.forecast.forecastday.hour.condition.icon[0]} </h3>
+       `; 
+       infoPorHoras.appendChild(contenedor4);
+      });
+       
+      
+    });
+  }
+
+   
+  
+    getInfoPorHoras() //llamar a la funcion para que me vuelque todo
+*/
+
+
+
+/*
+const getInfoPorHoras=(pronostico)=> {
+  pronostico.forEach((days)=>{ 
+    let infoPorHoras= document.getElementById("infoPorHoras"); //contenedor grande
+    let contenedor4= document.createElement("li"); //contenedor foto y nombre
+    contenedor4.innerHTML =` 
+    <h3>${days.forecast.forecastday.hour} </h3> 
+    <h3>${days.forecast.forecastday.hour.temp_c} </h3>
+    <h3>${days.forecast.forecastday.hour.condition.icon[0]} </h3>
+    `;
+   })
+   infoPorHoras.appendChild(contenedor4);
+  }
+   */
+
+
+
+
+  const infoActual=document.getElementById("infoActual")
+
+//PETICIÓN FETCH
+const getEstacionMeteo = async () => {
+  try {
+    //este try es como el then de la promesa del async
+    const response = await fetch(
+      "https://api.weatherapi.com/v1/forecast.json?key=a464065dd0fc4a379b095151240212&q=Oviedo&days=1&lang=es"
+    ); 
+
+    if (!response.ok) {
+      throw new Error("ha surgido un error", response.status);
+    }
+
+    const data = await response.json(); //segundo then de la promesa
+    console.log("El valor de data es: ", data);
+    console.log("el valor de response es:", response);
+
+    const tiempoHoy = () => {
+      console.log("data", data);
+      //contenedor 1
+      const contenedor1 = document.createElement("div"); //creo un nuevo contenedor donde voy a meter todos esos datos api
+      contenedor1.classList.add("contenedor1");
+      contenedor1.innerHTML = `
+      <h3>${data.location.name} / ${data.location.country}</h3>
+      <h3>${data.current.condition.text}</h3>
+      <img id="tiempoOviedo"  alt="Oviedo" src="${data.current.condition.icon}"/>
+       `;
+
+       //contenedor 2
+      const contenedor2 = document.createElement("div"); //creo un nuevo contenedor donde voy a meter todos esos datos api
+      contenedor2.classList.add("contenedor2");
+      contenedor2.innerHTML = `      
+      <h3>${data.current.temp_c}ºC</h3>
+      `;
+      //contenedor 3
+      const contenedor3 = document.createElement("div"); //creo un nuevo contenedor donde voy a meter todos esos datos api
+      contenedor3.classList.add("contenedor3");
+      contenedor3.innerHTML = `      
+      <h3> Precipitaciones: ${data.current.precip_mm} % </h3>
+      <h3> Humedad: ${data.current.humidity} % </h3>
+      <h3> Viento: ${data.current.wind_kph} Km/h </h3>
+       `;
+
+       infoActual.appendChild(contenedor1);
+       infoActual.appendChild(contenedor2);
+       infoActual.appendChild(contenedor3);
+
+    };
+    tiempoHoy();
+
+  } catch (error) {
+    //este catch sería el catch de la promesa async
+    console.log("error al obtener los datos", error);
+  }
+  
+};
+
+getEstacionMeteo(); //llamar a la function
+
+
+
+    const getInfoPorHoras=(days,hours)=> {
+      days.hours.forEach((days)=>{ 
+        const infoPorHoras= document.getElementById("infoPorHoras"); //contenedor grande
+        let contenedor4= document.createElement("div"); //contenedor foto y nombre
+        contenedor4.innerHTML =` 
+        <h3>${elements.forecast.forecastday.hour} </h3> 
+        <h3>${elements.forecast.forecastday.hour.temp_c} </h3>
+        <h3>${elements.forecast.forecastday.hour.condition.icon[0]} </h3>
+        `;
+        infoPorHoras.appendChild(contenedor4);s
+       })
+      };
+
+
+getInfoPorHoras()

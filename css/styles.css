@@ -254,8 +254,24 @@ body{
     text-decoration: underline;
     margin-top: 50px;
     margin-bottom: -45px;
-    cursor: pointer;
-   
+    cursor: pointer; 
+}
+
+/*los links guardados en el local storage*/
+.favoritos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    font-family:"Space Mono", serif;
+    color:  #d1dfe9;
+    margin-top: 25px;
+    width: 150px;
+    height: 35px;
+    text-decoration: underline;
+    margin-top: 50px;
+    margin-bottom: -45px;
+    cursor: pointer; 
 }
 
 /*botón eliminar*/
