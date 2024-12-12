@@ -2,7 +2,11 @@
 /*------------------------------BACKGROUNDS----------------------------------*/
 body{
     background-image:url(../assets/img/Asturias1.jpg);  
-    background-size: cover; 
+    background-attachment: fixed;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }  
 
 
@@ -267,7 +271,21 @@ body{
 
 /*---------------------------ESTACIÓN METEOROLÓGICA----------------------------------*/
 
-/*contenedor grande cabecera*/
+/*contenedor info x horas*/
+#infoPorHoras{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    border:  #0f3854 solid;
+    border-radius: 20px;
+    height:250px;
+    width: 810px;
+    margin-left:600px;
+    background-color: rgba(39, 39, 39, 0.576);
+    overflow-x: scroll;
+}
+
+/*contenedor info actual*/
 #infoActual{
     display: flex;
     justify-content: center; 
@@ -276,9 +294,10 @@ body{
     border-radius: 20px;
     margin-top: -760px;
     margin-left:600px;
-    height:750px;
+    height:190px;
     width: 850px;
     background-color: rgba(39, 39, 39, 0.576);
+    
 }
 
 
@@ -292,7 +311,7 @@ body{
     font-size: 16px;
     margin-right: 60px;
     margin-left:20px;
-    margin-top:-500px;
+ 
 }
 
 
@@ -306,7 +325,7 @@ body{
     -webkit-text-stroke: 0.2px #fafdff;
     font-size: 60px;
     margin-right: 60px;
-    margin-top:-500px;
+
 
 }
 
@@ -315,19 +334,33 @@ body{
     display: block;
     justify-content: center; 
     align-items: center;
-    font-family:"Share Tech Mono", serif;
-    color:   #d1dfe9;
+    font-family: "Space Mono", serif;
+    color: #d1dfe9;
     font-size: 16px;
     margin-right: 20px;
-    margin-top:-500px;
+
 }
 
-/*contenedor grande de los datos por horas*/
+/*datos por horas*/
 #infoPorHoras{
     display: flex;
-    justify-content: center;   
+    justify-content:space-around; 
+    align-items: center;
 }
 
+
+.contenedor4{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    font-family:"Share Tech Mono", serif;
+    color:   #d1dfe9;
+    font-size: 10px;
+    margin-right:3px;
+    width: 100px;
+   
+}
 
 /*logo API
 #weatherAPI{
@@ -342,7 +375,7 @@ body{
 */
 
 
-/*footer*/
+/*////////////////////////footer/////////////////////////////////*/
 .footerMenu{
     display: flex;
     justify-content:center;

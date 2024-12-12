@@ -1,7 +1,13 @@
 
 /*------------------------------BACKGROUNDS----------------------------------*/
+
 body{
-    background-image:url(../assets/img/Asturias1.jpg);   
+    background-image:url(../assets/img/Asturias1.jpg);  
+    /*background-attachment: fixed;*/
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }  
 
 
@@ -14,14 +20,12 @@ body{
     margin-top: 100px;
     background-color: rgba(39, 39, 39, 0.576);
     color: #e2e6e8;
-
 }
 
 /*footer cada icono*/
 .footer{
     color: #a9c7dc;
     padding: 15px;
-
 }
 
 /*icono home*/
@@ -30,6 +34,21 @@ body{
     color:  #102f44;
     text-decoration: none;
     font-size: 20px;
+}
+
+/*----------------------------------ESTACIÓN METEOROLÓGICA-----------------------------------*/
+/*contenedor info x horas*/
+#infoPorHoras{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    border:  #0f3854 solid;
+    border-radius: 20px;
+    height:250px;
+    width: 700px;
+    margin-left:340px;
+    background-color: rgba(39, 39, 39, 0.576);
+    overflow-x: scroll;
 }
 
 
@@ -42,9 +61,9 @@ body{
     align-items: center;
     border:  #0f3854 solid;
     border-radius: 20px;
-    margin-left:360px;
-    height:750px;
-    width: 700px;
+    margin-left:340px;
+    height:190px;
+    width: 740px;
     background-color: rgba(39, 39, 39, 0.576);
 }
 
@@ -59,7 +78,7 @@ body{
     font-size: 16px;
     margin-right: 60px;
     margin-left:20px;
-    margin-top:-500px;
+
 }
 
 
@@ -73,7 +92,7 @@ body{
     -webkit-text-stroke: 0.2px #fafdff;
     font-size: 60px;
     margin-right: 60px;
-    margin-top:-500px;
+
 
 }
 
@@ -86,11 +105,16 @@ body{
     color:   #d1dfe9;
     font-size: 16px;
     margin-right: 20px;
-    margin-top:-500px;
+
 }
 
-/*contenedor grande de los datos por horas*/
-#infoPorHoras{
-    display: flex;
-    justify-content: center;   
+.contenedor4{
+    display: block;
+    justify-content:end; 
+    align-items: center;
+    font-family:"Share Tech Mono", serif;
+    color:   #d1dfe9;
+    font-size: 8px;
 }
+
+

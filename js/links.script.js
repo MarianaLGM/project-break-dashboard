@@ -34,16 +34,14 @@ const añadirLink= ()=>{
       listaLinks.textContent=tituloLink.value;
       const link=(urlLink.value) //meto el valor de urlLink en una variable para luego llamarla a la hora de querer abrir la URL
     
-
-//Almacenar el link en localStorage
-const currentLink = JSON.parse(localStorage.getItem("linksInteres")) || [];
-    currentLink.push(link);
-    localStorage.setItem("linksInteres", JSON.stringify(currentLink));
-
-// Cargar los links almacenados en localStorage al cargar la página
-const storedLinks = JSON.parse(localStorage.getItem("linksInteres"));
+    // Cargar los links almacenados en localStorage al cargar la página
+    const storedLinks = JSON.parse(localStorage.getItem("linksInteres"));
     listaLinks.textContent = tituloLink.value;
 
+    //Almacenar el link en localStorage
+    const currentLink = JSON.parse(localStorage.getItem("linksInteres")) || [];
+    currentLink.push(link);
+    localStorage.setItem("linksInteres", JSON.stringify(currentLink))
 
 //ACCEDER URL LINK
     function abrirlUrl() {
@@ -67,10 +65,6 @@ const storedLinks = JSON.parse(localStorage.getItem("linksInteres"));
 añadirLink();
 
 
-
-
-
-
 /*------------------------------BACKGROUNDS----------------------------------*/
 
 const backgroundsLinks=[
@@ -90,76 +84,3 @@ const backgroundsLinks=[
     document.body.style.backgroundImage = 'url('+url+')';
     },9000);
 
-////////////////////////////////////////PRUEBA////////////////////////////////////////////
-/*
-//TRAER ELEMENTOS DEL DOM
-const tituloLink= document.getElementById ("tituloLink");//donde pongo el nombre del link
-const urlLink= document.getElementById ("urlLink"); //donde meto URL link
-const botonAñadir= document.getElementById ("botonAñadir");//botón añadir link
-
-//AÑADIR LINK
-const añadirLink= ()=>{
-    botonAñadir.addEventListener("click", ()=>{
-      const listaLinks=document.createElement("li")
-      listaLinks.classList.add ("listaLinks")
-      listaLinks.textContent=tituloLink.value;
-      const link=(urlLink.value) //meto el valor de urlLink en una variable para luego llamarla a la hora de querer abrir la URL
-    
-
-//Almacenar el link en localStorage
-const currentLink = JSON.parse(localStorage.getItem("linksInteres")) || [];
-    currentLink.push(link);
-    localStorage.setItem("linksInteres", JSON.stringify(currentLink));
-
-// Cargar los links almacenados en localStorage al cargar la página
-const storedLinks = JSON.parse(localStorage.getItem("linksInteres"));
-    listaLinks.textContent = tituloLink.value;
-  
-
-//ACCEDER URL LINK
-    function abrirlUrl() {
-      listaLinks.addEventListener("click", ()=>{
-      window.open(link);///cambiar urlLink por una variable que recoja el campo url y que cambie constantemente
-    }
-    )}
-    abrirlUrl()
-
-//CREAMOS BOTÓN ELIMINAR LINK
-    const btnEliminarLink=document.createElement("button")
-    btnEliminarLink.classList.add ("btnEliminarLink")
-    btnEliminarLink.innerHTML="X"
-    lista.appendChild(listaLinks);  
-    lista.appendChild(btnEliminarLink);
-    btnEliminarLink.addEventListener("click", ()=>{
-        listaLinks.remove();//eliminar link 
-        btnEliminarLink.parentNode.removeChild(btnEliminarLink);//para eliminar la X a la vez que elimino el link   
-    })
-    })
-  
-}
-añadirLink();
-*/
-
-
-
-
-
-
-/*
-//Almacenar el link en localStorage
-const currentLink = JSON.parse(localStorage.getItem("linksInteres")) || [];
-    currentLink.push(link);
-    localStorage.setItem("linksInteres", JSON.stringify(currentLink));
-    
-
-// Cargar los links almacenados en localStorage al cargar la página
-const storedLinks = JSON.parse(localStorage.getItem("linksInteres"));
-if (storedLinks) {
-  storedLinks.forEach(link => {
-    const favoritos = document.createElement('li');
-    favoritos.classList.add ("favoritos")
-    favoritos.textContent = link;
-    lista.appendChild(favoritos);
-    });
-}
-    */

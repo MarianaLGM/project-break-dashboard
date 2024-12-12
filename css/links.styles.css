@@ -1,0 +1,143 @@
+/*------------------------------BACKGROUNDS----------------------------------*/
+body{
+    background-image:url(../assets/img/Asturias1.jpg);  
+    background-attachment: fixed;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}  
+
+
+/*----------------------------------MENÚ------------------------------------*/
+.navigation{
+    color: #0f3854;
+}
+
+
+/*---------------------------LINKS INTERÉS----------------------------------*/
+
+/*contenedor grande de los links*/
+.contenedor-links{
+    display: block;
+    justify-content: center;
+    width: 450px;
+    height: 700px;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-left: 510px;
+    background-color: rgba(39, 39, 39, 0.576);
+    border:  #0f3854 solid;
+    
+}
+
+/*boton añadir enlace*/
+.botonAñadir{
+    font-family:"Space Mono", serif;
+    background-color: #1e4762;
+    cursor: pointer;
+    font-size: 15px;  
+    width: 350px;
+    color:#d1dfe9;
+}
+
+/*contenedor añadir enlace*/
+.contenedor-botonAñadir{
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    height: 35px;
+}
+
+/*contenedor titulo*/
+.titulo{
+    display: flex;
+    font-family: "Audiowide", sans-serif;
+    justify-content: center;
+    font-size: 25px;
+    color:  #102f44;
+    -webkit-text-stroke: 0.3px #dee9f1;
+    margin-bottom: -15px;
+    padding: 15px;
+}
+
+/*contenedor de los dos input*/
+.contenedor-tituloLink, .contenedor-urlLink{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+/*input donde meteo nombre del link y la url*/
+.tituloLink,.urlLink{
+    font-size: 12px;
+    height: 30px;
+    width: 350px;
+    font-family:"Space Mono", serif;
+    background-color:#d1dfe9;
+}
+
+
+/*cada links que voy guardando*/
+.listaLinks{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family:"Space Mono", serif;
+    color:  #d1dfe9;
+    margin-top: 25px;
+    width: 250px;
+    height: 35px;
+    text-decoration: underline;
+    margin-top: 50px;
+    margin-bottom: -45px;
+    margin-left: 10px;
+    cursor: pointer; 
+}
+
+/*botón eliminar*/
+.btnEliminarLink{
+    width: 10px;
+    height: 15px;
+    font-size: 10px;
+    font-family:"Space Mono", serif;
+    background-color: #d1dfe9;
+    color:#2a2b2c;
+    cursor: pointer;
+    margin-left: 25px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    
+}
+
+
+
+/*////////////////////////footer/////////////////////////////////*/
+.footerMenu{
+    display: flex;
+    justify-content:center;
+    align-items: end;
+    margin-top: 100px;
+    background-color: rgba(39, 39, 39, 0.576);
+    color: #e2e6e8;
+
+}
+
+/*footer cada icono*/
+.footer{
+    color: #a9c7dc;
+    padding: 15px;
+
+}
+
+/*icono home*/
+.home{
+    font-family:"Share Tech Mono", serif;
+    color:  #102f44;
+    text-decoration: none;
+    font-size: 20px;
+}
