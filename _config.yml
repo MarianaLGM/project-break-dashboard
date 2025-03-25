@@ -1,1 +1,3 @@
-baseurl: "/project-break-dashboard"  
+```yaml
+baseurl: "/project-break-dashboard"  # Nombre repo
+```
